@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template
 import requests
 
@@ -16,7 +15,7 @@ def get_random_image():
         return image_url
     
     except Exception as e:
-        print(f"Error fetching meme: {e}")
+        #print(f"Error fetching meme: {e}")
         
         return None
 
