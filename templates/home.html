@@ -1,0 +1,106 @@
+{% extends "base.html" %} 
+{% block title %} Home page {% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #61dafb;
+            color: #fff;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            background-color: #1e2229;
+            text-align: center;
+            padding: 1em;
+            color: aqua;
+            text-shadow: #FF6347;
+        }
+
+        h1, h2 {
+            color: green;
+        }
+
+        h3, h5 {
+            line-height: 1.6;
+            color: #FF1493;
+        }
+
+        p, li, tr {
+            line-height: 1.6;
+            color: #a4acc4;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #373c49;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 300%;
+            display: block;
+            margin: auto;
+        }
+
+        a {
+            color: #00FF00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-bottom: 2px solid #FF6347;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+       <header><b>----IMAGE GUEST----</b></header>
+
+       <section>
+            <section>
+                <h2>Explore, Discover, and Download Stunning Images!</h2>
+            </section>
+
+            <section>
+                <p><img id="random_iamge" src="{{ image_url }}" alt="random image from Unplash website"></p><br>
+            </section>
+
+            <button class="btn btn-primary" onclick="refreshPage()"> Refresh Image </button>
+            <script>
+                function refreshPage() {
+                    location.reload();
+                }
+            </script>
+            
+            <a href="{{ image_url }}" download>
+                <button class="btn btn-primary">Download Image</button>
+            </a>
+       </section>
+
+        <footer>
+            <p>&copy;2024 Dev_aladinh production.</p>
+        </footer>
+
+    </section>
+</body>
+</html>
+
+{% endblock %}
