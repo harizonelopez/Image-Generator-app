@@ -28,13 +28,8 @@
             text-shadow: #FF6347;
         }
 
-        h1, h2 {
+        h2 {
             color: green;
-        }
-
-        h3, h5 {
-            line-height: 1.6;
-            color: #FF1493;
         }
 
         p {
@@ -81,7 +76,9 @@
                 <p><img id="random_iamge" src="{{ image_url }}" alt="random image from Unplash website"></p><br>
             </section>
 
-            <button class="btn btn-primary" onclick="refreshPage()"> Refresh Image </button>
+            <button class="btn btn-primary" onclick="refreshPage()">Refresh Image</button>
+           
+           <!----JavaScript code snippet which takes the action of the reload page---->
             <script>
                 function refreshPage() {
                     location.reload();
@@ -89,7 +86,7 @@
             </script>
             
             <a href="{{ image_url }}" download>
-                <button class="btn btn-primary"> Download Image </button>
+                <button class="btn btn-primary">Download Image</button>
             </a>
        </section>
 
